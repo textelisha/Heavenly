@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import axios from 'axios';
 import ChatMessage from '../components/ChatMessage';
 import ChatInput from '../components/ChatInput';
 import LoadingAnimation from '../components/LoadingAnimation';
@@ -12,7 +11,6 @@ function Chat() {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
   const [chats, setChats] = useState([]);
-  const [currentChatId, setCurrentChatId] = useState(null);
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
